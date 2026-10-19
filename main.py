@@ -1,6 +1,7 @@
 from gestionale.core.prodotti import Prodotto, crea_prodotto_standard, ProdottoRecord
 from gestionale.core.clienti import Cliente, ClienteRecord
 from gestionale.vendite.ordini import Ordine, RigaOrdine, OrdinecConSconto
+import networkx as nx  #importa la libreria networkx , che è un package, e la rinomikna con nx
 
 print("===========================================================")
 
