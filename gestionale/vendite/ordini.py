@@ -45,13 +45,14 @@ class Ordine:
 
         return "\n".join(linee)
 
+
 @dataclass
-class OrdinecConSconto(Ordine):
+class OrdineConSconto(Ordine):
     sconto_percentuale: float
 
     def totale_scontato(self):
-        return self.totale_lordo()*(1-self.sconto_percentuale)
+        return self.totale_lordo() * (1 - self.sconto_percentuale)
 
     def totale_netto(self):
-        netto_base= super().totale_netto()
-        return netto_base*(1-self.sconto_percentuale)
+        netto_base = super().totale_netto()
+        return netto_base * (1 - self.sconto_percentuale)
